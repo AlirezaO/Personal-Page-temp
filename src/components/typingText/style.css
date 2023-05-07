@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'ChakraPetch';
+    src: url('../../assets/Fonts/ChakraPetch/ChakraPetch-MediumItalic.ttf') format('truetype');
+  }
+
+.text-area-animated-background {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-size: 200% 200%;
+    animation: gradient-animation 7s ease-in-out infinite;
+    border: none;
+    font-family: 'ChakraPetch', sans-serif;
+    color: #034078;
+    pointer-events: none;
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
