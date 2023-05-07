@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './style.css'
 
 const texts= [
-  {type:'me', text:`HI THERE ! :)\nMy Name Is Alireza Omidi`},
-  {type:'email', text:`This Is da Email`},
-  {type:'linkedin', text:`This Is da LinedIn`},
+  {type:'Me', text:`HI THERE ! :)\nMy Name Is Alireza Omidi\nIn case you're not familiar with it, the most common form of lorem ipsum text is the following: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`},
+  {type:'Email', text:`This Is da Email`},
+  {type:'LinkedIn', text:`This Is da LinedIn`},
+  {type:'GitHub', text:`das ist github`}
 ]
 
 const TypingText = ({type}) => {

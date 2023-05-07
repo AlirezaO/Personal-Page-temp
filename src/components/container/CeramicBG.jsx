@@ -13,6 +13,8 @@ import Box from '@mui/material/Box';
 import { AiOutlineMail } from "react-icons/ai";
 import { IconContext } from "react-icons"
 
+import Icons from '../iconComponents/Icons';
+
 
 export default function QuiltedImageList() {
 
@@ -37,6 +39,12 @@ export default function QuiltedImageList() {
 
   const handleLinkedInHover = (b) => {
     setHoveredLinkedIn(b);
+  };
+
+  const [hoveredGitHub, setHoveredGitHub] = useState("");
+
+  const handleGitHubHover = (b) => {
+    setHoveredGitHub(b);
   };
 
 
@@ -64,7 +72,7 @@ export default function QuiltedImageList() {
               <h3>{item.title}</h3>
               {item.size==='Large' &&  
                 <div className="typing-text-container">
-                  <TypingText type='me' />
+                  <TypingText type={item.title} />
                 </div>
               }
               
@@ -74,14 +82,26 @@ export default function QuiltedImageList() {
                   onMouseLeave={() => handleEmailHover("")}
                   className='typing-text-container'
                 >
-                  <div className={`ai-outline-mail-container ${hoveredEmail ? 'visible' : ''}`}>
-                    <IconContext.Provider value={{ className: "shared-class", size: 100 }}>
-                      <AiOutlineMail />
-                    </IconContext.Provider>
-                  </div>
+                  <Icons type={item.title} hovered={hoveredEmail}/>
                   
-                  <div className={`ai-outline-mail-container ${hoveredEmail ? '' : 'visible'}`}>
-                    <TypingText type='email' />
+                  <div className={`typing-text-container ai-outline-mail-container${hoveredEmail ? '' : 'visible'}`}>
+                    <TypingText type={item.title} />
+                  </div>
+
+                </div>
+                
+              )}
+              
+              {item.size === "Small" && (
+                <div 
+                  onMouseEnter={item.title==='LinkedIn'? () => handleLinkedInHover(true) : () => handleGitHubHover(true)}
+                  onMouseLeave={item.title==='LinkedIn'? () => handleLinkedInHover("") : () => handleGitHubHover("")}
+                  className='typing-text-container'
+                >
+                  <Icons type={item.title} hovered={item.title==='LinkedIn'? hoveredLinkedIn: hoveredGitHub}/>
+                  
+                  <div className={`typing-text-container ai-outline-mail-container${item.title==='LinkedIn'? (hoveredLinkedIn ? '' : 'visible') :  (hoveredGitHub ? '' : 'visible')}`}>
+                    <TypingText type={item.title} />
                   </div>
 
                 </div>
