@@ -16,6 +16,7 @@
     text-align: justify;
     margin-left: 5px;
     margin-right: 20px;
+    resize: none;/*  removes the 4 black line at bottom right of textarea */
   }
   
   @keyframes gradient-animation {
