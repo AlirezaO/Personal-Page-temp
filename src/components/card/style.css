@@ -1,0 +1,16 @@
+.card-class{
+    background-image: url('../../assets/images/Blockchain3.png');
+    background-size: cover ;
+    background-position: center center;
+    z-index: 1;
+}
+
+.card-content-class{
+    z-index: 2;
+    backdrop-filter: blur(2px);
+}
+/*THE BELOW CLASS IS THE SAME AS ABOVE*/
+/* .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.css-19xf2vz-MuiPaper-root-MuiCard-root{
+    background-image: url('../../assets/images/small\ people.png');
+    background-size: cover ;
+} */
