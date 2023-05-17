@@ -67,7 +67,7 @@ export default function CvTabs() {
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
             {
               Cv.map(item => 
-                <Tab label={item.title} {...a11yProps(item.num)} />
+                <Tab label={item.title} {...a11yProps(item.num)} sx={{ fontWeight: 'bold' }} />
               )
             }
           </Tabs>

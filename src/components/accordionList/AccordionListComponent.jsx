@@ -7,6 +7,11 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { Cv } from '../../utils/Cv.js';
 import CardComponent from '../card/CardComponent.jsx';
+import ListItem from '@mui/material/ListItem';
+import ListSubheader from '@mui/material/ListSubheader';
+import Box from '@mui/material/Box';
+import Fab from '@mui/material/Fab';
+import Divider from '@mui/material/Divider';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -58,7 +63,9 @@ export default function AccordionList({index}) {
 
       {
           Cv[index].list.map((item, i)=>
-
+            <>
+            {(index < 4) && (
+            <>
             <Accordion  key={i}
                         expanded={expanded === i}
                         onChange={handleChange(i)}
@@ -67,25 +74,67 @@ export default function AccordionList({index}) {
                 aria-controls={`panel${i}d-content`}
                 id={`panel${i}a-header`}
               >
-                <Typography>{item.title}</Typography>
+                <div className='list-item-title'>
+                  <Typography sx={{fontFamily: 'ChakraPetch, sans-serif'}}>{item.title}</Typography>
+                </div>
               </AccordionSummary>
 
               <AccordionDetails>
                 <Typography>
-                  <CardComponent data={item}/>
-                  <ul>
-                    {item.discription.map((disc, j) => 
-                      <li key={j}>
-                        {disc}
-                      </li>
-                    )}
-                  </ul>
+                  {(index !== 2) && (
+                    <>
+                      <CardComponent data={item} />
+                      <ul>
+                        {item.discription.map((disc, j) => (
+                          <>
+                            <li key={j}>{disc}</li>
+                            <Divider />
+                          </>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  
+                  {index === 2 && 
+
+                      item.skill_list.map((s) => (
+                        <>
+                          <ListSubheader>{s.title}</ListSubheader>
+                        
+                          <ListItem key={`item-${item.skill_list.title}-${item}`}>
+                          {s.item.map(i => 
+                            <Box sx={{ '& > :not(style)': { m: 1 } }}>
+                              <Fab color="primary"  variant="extended">
+                              {i}
+                              </Fab>
+                            </Box>
+                      
+                              // <ListItemText primary={i} />
+                          )}
+                          </ListItem>
+                          </>
+                        ))
+                  }
+
+                  
                   
                 </Typography>
               </AccordionDetails>
             </Accordion>
+            </>
+            )}
             
+
+            {index === 4 &&
+              <Box sx={{ '& > :not(style)': { m: 1 } }}>
+              <Fab color="primary"  variant="extended">
+              {item}
+              </Fab>
+            </Box>
+            }
+            </>
           )
+          
         }
       
       

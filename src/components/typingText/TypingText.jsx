@@ -11,14 +11,8 @@ const texts= [
 const TypingText = ({type}) => {
 
   const [text, setText] = useState(''); 
-  const delay = 100; // in milliseconds
+  const delay = 60; // in milliseconds
   let message = texts.find(t => t.type === type).text
-    
-  const handleClick = () => {
-    const email = message.split(': ')[1];
-    window.open(`https://mail.yahoo.com/d/compose/${email}`);
-    navigator.clipboard.writeText(email);
-  };
 
   useEffect(() => {
     let i = 0;
@@ -33,17 +27,9 @@ const TypingText = ({type}) => {
   //YOU WERE TRYING TO PUT YOUR EMAIL ADDRESS AS A LINK IN THE EMAIL CERAMIC COMPONENT. FIX IT
   return (
     <>
-      {type === 'Email' ? (
-       
-          <a href={`https://mail.yahoo.com/d/compose/${message.split(': ')[1]}`} onClick={handleClick}>
-            <textarea rows="1" cols="25" value={text} readOnly className="text-area-animated-background" />
-          </a>
 
-      ) : (
+        <textarea rows="10" cols="80" value={text} className="text-area-animated-background" />
 
-        <textarea rows="1" cols="25" value={text} readOnly className="text-area-animated-background" />
-
-      )}
     </>
   );
 };

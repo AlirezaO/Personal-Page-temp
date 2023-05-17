@@ -17,12 +17,12 @@ export default function CardComponent({data}) {
             {data.jobTitle}
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {data.from} - {data.to}
+          {data.from}{data.to}
           </Typography>
           <Typography variant="body1">
             
             <br />
-            "{data.summary}"
+            {data.summary}
           </Typography>
         </CardContent>
       </Card>

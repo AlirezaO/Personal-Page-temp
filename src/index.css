@@ -6,8 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: url('./assets/images/DarkTheme2.png');
-  background-size: cover;
+  /* background-image: url('./assets/images/DarkTheme2.png') !important; */
+  background-color: #a9d6e5 !important;
+  background-size: cover !important;
   
   background-repeat: no-repeat;
   background-position: center;

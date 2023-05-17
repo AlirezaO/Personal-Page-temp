@@ -14,21 +14,10 @@
     color: #034078;
     pointer-events: none;
     text-align: justify;
-    margin-left: 5px;
-    margin-right: 20px;
-    resize: none;/*  removes the 4 black line at bottom right of textarea */
+    resize: none;
+    overflow: hidden;
   }
   
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
-  }
+
 
   
