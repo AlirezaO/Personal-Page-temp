@@ -10,7 +10,7 @@ function App() {
     <div  className='App-class' >
       {/* <Header/> */}
 
-      <div style={{ marginTop: '50px'}}> {/*Ask if this is an efficient way to prevent the first text of each page to be placed behind the header component */}
+      <div style={{ marginTop: '0px'}}> {/*Ask if this is an efficient way to prevent the first text of each page to be placed behind the header component */}
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} />

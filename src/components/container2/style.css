@@ -23,12 +23,23 @@
     height: 100px;
     object-fit: fill;
 }
+/* 
+.image-center{
+    background-image: url('../../assets/images/Blockchain3.png') !important;
+    background-size: cover ;
+    background-position: center center;
+} */
 
 .image-top {
   /* transform: translateY(-100px); */
-  transform: translateX(550px) ;
+  margin-top: 30px;
+  transform: translateY(160px);
+  /* translateX(550px)  */
   transition: 700ms ease-in-out;
   border-radius: 50%;
+  /* background-image: url('../../assets/images/Blockchain3.png') !important;
+    background-size: cover ;
+    background-position: center center; */
 
 }
 

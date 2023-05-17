@@ -34,7 +34,7 @@ const AccordionSummary = styled((props) => (
   backgroundColor:
     theme.palette.mode === 'dark'
       ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(241, 250, 238, 255)',
+      : 'rgba(133, 188, 199, 255)',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
