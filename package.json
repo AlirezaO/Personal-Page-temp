@@ -1,4 +1,5 @@
 {
+  "homepage": "http://alirezao.github.io/Personal-Page",
   "name": "personal-page2",
   "version": "0.1.0",
   "private": true,
@@ -25,7 +26,6 @@
     "styled-components": "^5.3.10",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://AlirezaO.github.io/Personal-Page",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
