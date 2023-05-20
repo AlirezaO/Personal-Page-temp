@@ -1,6 +1,6 @@
 import { React } from "react";
 // import CustomComponent from "../container/container";
-import CustomComponent2 from "../container2/container";
+import CustomComponent2 from "../container2/Container";
 import Contact from "../contact/Contact";
 import CvTabs from "../cvTabs/CvTabsComponent";
 
