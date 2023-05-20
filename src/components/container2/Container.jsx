@@ -31,6 +31,7 @@ function CustomComponent2() {
       <Popup  //CHECK THE CLASS OF THIS COMPONENT AND INCREASE THE SIZE OF IT!!!!
         trigger={
           <Image
+            style={{marginTop:'-140px', marginLeft:'1050px'}}
             size="small"
             src="https://images.unsplash.com/photo-1516802273409-68526ee1bdd6"
             className={`image-${imagePosition}`}
